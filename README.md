@@ -17,6 +17,13 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense, Bidirectional, TimeD
 from tensorflow.keras.initializers import Constant
 from sklearn.metrics import classification_report
 ```
+### Downloading GloVe (Terminal command)
+```bash
+$ProgressPreference = 'SilentlyContinue'
+Invoke-WebRequest -Uri "http://nlp.stanford.edu/data/glove.6B.zip" -OutFile glove.6B.zip
+Expand-Archive -LiteralPath .\glove.6B.zip -DestinationPath glove
+```
+
 
 ## Reproducibility
 To ensure reproducibility across different runs, we set a fixed random seed using the following code:
